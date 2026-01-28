@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alpha C.T</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/remixicon/fonts/remixicon.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background: linear-gradient(135deg, #0d0f16 0%, #1a1d2e 100%);
+            color: #e0e0e0;
+            line-height: 1.6;
+            min-height: 100vh;
+        }
+
+        .site-header {
+            background: linear-gradient(135deg, rgba(25, 28, 36, 0.95) 0%, rgba(15, 18, 28, 0.95) 100%);
+            padding: 20px 20px;
+            text-align: center;
+            border-bottom: 2px solid rgba(52, 194, 234, 0.3);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+            backdrop-filter: blur(10px);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .site-header::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: radial-gradient(circle at top right, rgba(52, 194, 234, 0.1) 0%, transparent 70%);
+            pointer-events: none;
+        }
+
+        .header-content {
+            position: relative;
+        }
+
+        .logomarca {
+            margin-bottom: 20px;
+            animation: fadeInDown 0.8s ease;
+        }
+
+        .logomarca img {
+            width: 110px;
+            filter: drop-shadow(0 0 20px rgba(52, 194, 234, 0.3));
+            transition: transform 0.3s ease;
+        }
+
+        .site-header h1 {
+            color: #ffffff;
+            font-size: 2.4em;
+            font-weight: 700;
+            margin-bottom: 10px;
+            letter-spacing: 2px;
+            animation: fadeInUp 0.8s ease 0.2s both;
+        }
+
+        .site-header p {
+            color: #b0b8c8;
+            font-size: 1.1em;
+            margin-bottom: 0;
+            animation: fadeInUp 0.8s ease 0.4s both;
+        }
+
+        .site-header p a {
+            color: #34c2ea;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            position: relative;
+        }
+
+        .verified-icon {
+            vertical-align: middle;
+            width: 30px;
+            filter: drop-shadow(0 0 8px rgba(52, 194, 234, 0.4));
+
+        }
+
+        @keyframes fadeInDown {
+            from {
+                opacity: 0;
+                transform: translateY(-20px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Container de Botões */
+        .btn-actions {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 20px;
+            padding: 40px 20px;
+            flex-wrap: wrap;
+        }
+
+        .btn-de-matricula,
+        .btn-whatsapp {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: auto;
+        }
+
+        .btn-actions a {
+            background: #1d2034;
+            font-size: 13px;
+            text-decoration: none;
+            padding: 16px 40px;
+            border-radius: 13px;
+            color: #ffffff;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            letter-spacing: 0.5px;
+            display: inline-block;
+            border: 2px solid transparent;
+        }
+    </style>
+</head>
+
+<body>
+    <header class="site-header">
+        <div class="header-content">
+            <div class="logomarca">
+                <img src="./recursos/imgs/logomarca.png" alt="Logo Academia Alpha C.T">
+            </div>
+            <h1>Alpha C.T <img src="./recursos/icons/verified.svg" alt="Verificado" class="verified-icon"></h1>
+            <p>Vem sentir a sensação de ser <br> <a href="#padrao">#PadrãoAlpha💪</a></p>
+        </div>
+        <div class="social-medias" style="margin-top: 20px; display: flex; justify-content: center; gap: 20px;">
+            <a href="https://www.tiktok.com" style="text-decoration: none;" alt="tiktok-link" target="_blank"> <i
+                    class="ri-tiktok-line" style="color: #dfdfdf; font-size: 2em;"></i></a>
+
+            <a href="https://www.instagram.com" style="text-decoration: none;" alt="instagram-link" target="_blank"> <i
+                    class="ri-instagram-line" style="color: #dfdfdf; font-size: 2em;"></i></a>
+            <a href="wa.me//5581999999" target="_blank" style="text-decoration: none;"><i class="ri-whatsapp-line"
+                    style="color: #dfdfdf; font-size: 2em;"></i></a>
+        </div>
+        <div class="login">
+            <a href="./entrar/" style="text-decoration: underline; font-size: 13px; color: rgb(255, 173, 97) ;">Já está
+                matrículado? Entre na sua conta.</a>
+        </div>
+    </header>
+    <main>
+        <div class="btn-actions">
+            <div class="btn-de-matricula">
+                <a href="./matricula/" style="font-size: 18px; font-weight: 500;">Faça sua matricula online <i
+                        class="ri-arrow-right-s-line"></i></a>
+            </div>
+            <div class="btn-whatsapp">
+                <a href="wa.me//5581999999" target="_blank" style="font-size: 18px; font-weight: 500;">Fale conosco <i
+                        class="ri-arrow-right-s-line"></i></a>
+            </div>
+        </div>
+        <div class="por-que-ser-alphact" style="text-align: center;">
+            <h2 style="">Por que escolher a Alpha C.T?</h2>
+            <p style="max-width: 400px; margin: 0 auto; font-size: 13px; color: #aeaeae;">Alpha C.T é uma academia que
+                oferece um ambiente diferenciado, com profissionais qualificados e equipamentos modernos.
+                Nosso espaço é exclusivo. Não é cada um por si, aqui você vem pelo treino e fica pela maneira que a
+                gente te trata.
+            </p>
+            <img src="./recursos/imgs/img0.jpg" alt=""
+                style="width: 400px; margin-top: 20px; margin-bottom: 50px; border-radius: 10px; box-shadow: 0 0 20px rgba(52, 194, 234, 0.3);">
+        </div>
+    </main>
+</body>
+
+</html>
